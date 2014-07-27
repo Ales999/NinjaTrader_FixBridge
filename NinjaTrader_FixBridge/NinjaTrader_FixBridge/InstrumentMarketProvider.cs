@@ -66,6 +66,8 @@ namespace NinjaTrader_FixBridge
             lock (locker_)
             {
                 NinjaTrader.Strategy.FixConnector f = Logger();
+
+
                 if (f != null) f.Info(source, message);
             }
         }

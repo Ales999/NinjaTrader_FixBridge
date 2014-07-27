@@ -1,0 +1,8 @@
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\obj\Debug\NinjaTrader_FixBridge.csprojResolveAssemblyReference.cache
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\bin\Debug\NinjaTrader_FixBridge.dll
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\bin\Debug\NinjaTrader_FixBridge.pdb
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\bin\Debug\Microsoft.QualityTools.Testing.Fakes.dll
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\bin\Debug\QuickFix.dll
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\bin\Debug\QuickFix.pdb
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\obj\Debug\NinjaTrader_FixBridge.dll
+C:\Users\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\NinjaTrader_FixBridge\obj\Debug\NinjaTrader_FixBridge.pdb

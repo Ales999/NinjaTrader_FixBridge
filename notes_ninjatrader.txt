@@ -1,0 +1,1 @@
+bin/ contains necessary dll to compile NinjaTrader_FixBridge.dll 

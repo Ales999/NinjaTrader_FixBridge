@@ -146,7 +146,7 @@ namespace NinjaTrader_FixBridge
                 if (m_acceptor != null)
                 {
                     m_acceptor.Stop(true);
-                    m_acceptor.Dispose();
+                 //   m_acceptor.Dispose();
                     m_acceptor = null;
                 }
 

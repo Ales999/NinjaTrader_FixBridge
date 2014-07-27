@@ -16,7 +16,10 @@ namespace NinjaTrader.Strategy
     /// A FixConnector provides order management system and market data for a symbol
     /// </summary>
     [Description("FixConnector")]
+
     public class FixConnector : Strategy
+        //  public class FixConnector : Strategy
+        //QuickFixStaticAcceptor pulls OnStartUp(NinjaTrader.Strategy.FixConnector fixConnector)
     {
 
         object locker_ = new object();
@@ -25,12 +28,12 @@ namespace NinjaTrader.Strategy
         /// <summary>
         /// This method is used to configure the strategy and is called once before any strategy method is called.
         /// </summary>
-        protected override void Initialize()
+        protected void Initialize()
         {
 
             
 
-            CalculateOnBarClose = false;
+           CalculateOnBarClose = false;
             Unmanaged = true;
             RealtimeErrorHandling = RealtimeErrorHandling.TakeNoAction;
 
@@ -42,7 +45,7 @@ namespace NinjaTrader.Strategy
         }
 
 
-        protected override void OnStartUp()
+        protected void OnStartUp()
         {
             if (string.IsNullOrEmpty(BridgeName))
                 throw new Exception("BridgeName cannot be empty.");
@@ -98,7 +101,7 @@ namespace NinjaTrader.Strategy
             }));
         }
         #endregion
-        protected override void OnExecution(IExecution execution)
+        protected void OnExecution(IExecution execution)
         {
             ThreadPool.QueueUserWorkItem(new WaitCallback(obj =>
             {
@@ -107,7 +110,7 @@ namespace NinjaTrader.Strategy
             }));
         }
 
-        protected override void OnOrderUpdate(IOrder order)
+        protected void OnOrderUpdate(IOrder order)
         {
             // exception : we ignore this notification when order is Filled or PartFilled, we wait the call back via OnExecution
             if (order.OrderState == OrderState.Filled || order.OrderState == OrderState.PartFilled)
@@ -121,7 +124,8 @@ namespace NinjaTrader.Strategy
                 }
             }));
         }
-        protected override void OnTermination()
+        protected void OnTermination()
+        //protected override void OnTermination()
         {
             Info(BridgeName, "[OnTermination] Stopping FixConnector  ...");
             lock (locker_)
@@ -192,7 +196,8 @@ namespace NinjaTrader.Strategy
 
 
         #region refered to market data
-        protected override void OnBarUpdate()
+        protected void OnBarUpdate()
+        // protected override void OnBarUpdate()
         {
 
             try
@@ -231,7 +236,7 @@ namespace NinjaTrader.Strategy
     
         #region variables
 
-        string m_configFileName = @"D:\trading\NinjaTrader_FixBridge\NinjaTrader_FixBridge\config_samples\acceptor.cfg";
+        string m_configFileName = @"C:\trader\NinjaTrader_FixBridge\NinjaTrader_FixBridge\config_samples\acceptor.cfg";
         string m_symbols = "ES ##-##,GC ##-##,CL ##-##";
         string m_bridgeName = (new Random()).Next(1000000000).ToString("000000000");
         
