@@ -9,6 +9,8 @@ The dedicated protocol for order management and price notification is FIX. This 
 --------------
 Installation
 --------------
+Access dll = https://github.com/redrhino/NinjaTrader_FixBridge/tree/master/NinjaTrader_FixBridge/NinjaTrader_FixBridge/bin/Debug
+
 Compile QuickFix.dll from quickFIXn source
 
 Compile NinjaTrader_FixBridge.dll from source ( must include NinjaTrader.core.dll + quickfix.dll) 
