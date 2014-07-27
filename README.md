@@ -12,8 +12,11 @@ The dedicated protocol for order management and price notification is FIX. This 
 Installation
 
 Compile QuickFix.dll from quickFIXn source
+
 Compile NinjaTrader_FixBridge.dll from source ( must include NinjaTrader.core.dll + quickfix.dll) 
+
 Copy both dlls into your personnal NinjaTrader folder, ie into %USERPROFILE%\Documents\NinjaTrader 7\bin\Custom
+
 Restart NinjaTrader: it will load the dll on start up.
 
 
